@@ -112,4 +112,21 @@ constexpr double s2 = sum(v); // error: sum(v) is not a constant expression
 
 ```
 
-    
+# Pointers, Array and References
+The most fundamental collection of data is a contiguously allocated sequence of elements of the
+same type, called an array. This is basically what the hardware offers. An array of elements of
+type char can be declared like this:
+
+
+In declarations, [ ] means ‘‘array of’’ and ∗ means ‘‘pointer to.’’ All arrays have 0 as their lower
+bound, so v has six elements, v[0] to v[5]. The size of an array must be a constant expression (§1.6).
+A pointer variable can hold the address of an object of the appropriate type:
+
+# The Null Pointer
+When we don’t hav e an object to point to or if we need to represent the notion of ‘‘no object available’’ (e.g.,
+for an end of a list), we give the pointer the value nullptr (‘‘the null pointer’’).
+
+# Tests
+C++ provides a conventional set of statements for expressing selection and looping, such as ifstatements, switch-statements, while-loops, and for-loops
+
+
