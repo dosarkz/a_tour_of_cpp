@@ -112,4 +112,72 @@ constexpr double s2 = sum(v); // error: sum(v) is not a constant expression
 
 ```
 
-    
+# Pointers, Array and References
+The most fundamental collection of data is a contiguously allocated sequence of elements of the
+same type, called an array. This is basically what the hardware offers. An array of elements of
+type char can be declared like this:
+
+
+In declarations, [ ] means ‘‘array of’’ and ∗ means ‘‘pointer to.’’ All arrays have 0 as their lower
+bound, so v has six elements, v[0] to v[5]. The size of an array must be a constant expression (§1.6).
+A pointer variable can hold the address of an object of the appropriate type:
+
+# The Null Pointer
+When we don’t hav e an object to point to or if we need to represent the notion of ‘‘no object available’’ (e.g.,
+for an end of a list), we give the pointer the value nullptr (‘‘the null pointer’’).
+
+# Tests
+C++ provides a conventional set of statements for expressing selection and looping, such as ifstatements, switch-statements, while-loops, and for-loops
+
+
+# Mapping to Hardware 
+C++ offers a direct mapping to hardware. When you use one of the fundamental operations, the
+implementation is what the hardware offers, typically a single machine operation. For example,
+adding two ints, x+y executes an integer add machine instruction.
+
+A C++ implementation sees a machine’s memory as a sequence of memory locations into which
+it can place (typed) objects and address them using pointers
+
+```
+int x = 2;
+int y = 3;
+int∗ p = &x;
+int∗ q = &y; // now p!=q and *p!=*q
+p = q; // p becomes &y; now p==q, so (obviously)*p == *q
+```
+
+# Advice
+- Don't panic! All will become clear in time;
+- Don't use the built-in features exclusively or on their own. On the contrary, the fundamental (built-in) features are usually best used indirectly through libraries, such as the ISO C++ standard library.
+- You don’t have to know every detail of C++ to write good programs
+- Focus on programming techniques, not on language features.
+- For the final word on language definition issuesm see the ISO C++ standard;
+- "Package" meaningful operations as carefully named functions;
+- A function should perform a single logical operation;
+- Keep functions short;
+- Use overloading when functions perform conceptually the same task on different types;
+- If a function may have th be evaluated at compile time, declare in constexpr;
+- Understand how language primitives map to hardware;
+- Use digit separator to make large literals readable;
+- Avoid complicated expressions;
+- Avoid narrowing conversions
+- Minimize the scope of a variable
+- Avoid ‘‘magic constants’’; use symbolic constants;
+- Prefer immutable data
+- Declare one name (only) per declaration
+- Keep common and local names short, and keep uncommon and nonlocal names longer
+- Avoid similar-looking names
+- Avoid ALL_CAPS names
+- Prefer the {}-initializer syntax for declarations with a named type
+- Use auto to avoid repeating type names
+- Avoid uninitialized variables
+- Keep scopes small
+- When declaring a variable in the condition of an if-statement, prefer the version with the
+  implicit test against 0
+- Use unsigned for bit manipulation only
+- Keep use of pointers simple and straightforward
+- Use nullptr rather than 0 or NULL
+- Don’t declare a variable until you have a value to initialize it with
+- Don’t say in comments what can be clearly stated in code
+- State intent in comments
+- Maintain a consistent indentation style
