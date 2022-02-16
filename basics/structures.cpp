@@ -36,6 +36,7 @@ double read_and_sum(int s)
 
 //We use . (dot) to access struct members through a name (and through a reference) and −> to
 //access struct members through a pointer. For example:
+
 void f(Vector v, Vector& rv, Vector* pw)
 {
     int i1 = v.sz; // access through name
