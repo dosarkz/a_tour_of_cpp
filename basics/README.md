@@ -181,3 +181,7 @@ p = q; // p becomes &y; now p==q, so (obviously)*p == *q
 - Don’t say in comments what can be clearly stated in code
 - State intent in comments
 - Maintain a consistent indentation style
+
+# Unions
+union is a struct in which all members are allocated at the same address so that the union occupies only as much space as its largest member. Naturally, a union can hold a value for only one
+member at a time.
